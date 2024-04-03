@@ -1,4 +1,4 @@
-# writing
+# Writing
 
 CREATING AN ANACONDA VIRTUAL ENVIRONMENT
 Here’s an example of how to create a new Conda environment using the conda create command:
@@ -66,7 +66,7 @@ Using a virtual environment created with conda:
 #SBATCH --partition=your_partition
 
 # Load any necessary modules or dependencies
-module load conda
+`module load conda`
 module load some_module
 
 # Activate the virtual environment
