@@ -1,10 +1,12 @@
 # Writing
 
 ## CREATING AN ANACONDA VIRTUAL ENVIRONMENT
+- Before use virtual environment, we should download and install Anaconda in https://www.anaconda.com/download 
+
 Here’s an example of how to create a new Conda environment using the conda create command:
 
-1. Open your terminal or command prompt
-2. Enter the following command to create a new Conda environment named myenv:
+1. Open your terminal or command prompt (after you installed success Anaconda, recommended use : Anaconda Prompt)
+2. Enter the following command to create a new Conda environment named `myenv`:
 
         module load anaconda
         conda create --name myenv
