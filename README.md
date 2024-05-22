@@ -65,6 +65,9 @@ Replace /path/to/venv with the path to your virtual environment directory, and m
 
 Additionally, make sure to adjust the module load commands for any other modules or dependencies your Python script requires.
 
+# Adding Note from me :
+## Get a list of all conda virtual environments
+        conda env list
 
 
 Thanks to, 
