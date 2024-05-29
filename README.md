@@ -1,8 +1,8 @@
 # WRITING 
 
 # Daftar Isi
-1. [Pendahuluan](#setup-and-use-git)
-2. [Latar Belakang](`#creating-an-anaconda-virtual-environment`)
+1. [Setup and Use Git](#setup-and-use-git)
+2. [Creating an Anaconda Virtual Environment](#creating-an-anaconda-virtual-environment)
 
 ## Pendahuluan
 Bagian ini menjelaskan tentang pendahuluan dari dokumen ini.
