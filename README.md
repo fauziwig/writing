@@ -1,7 +1,7 @@
 # WRITING 
 
 # Daftar Isi
-1. [Pendahuluan](`#setup-and-use-git`)
+1. [Pendahuluan](#setup-and-use-git)
 2. [Latar Belakang](`#creating-an-anaconda-virtual-environment`)
 
 ## Pendahuluan
