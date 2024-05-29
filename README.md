@@ -1,15 +1,10 @@
 # WRITING 
 
-# Daftar Isi
-1. [Setup and Use Git](#setup-and-use-git)
-2. [Creating an Anaconda Virtual Environment](#creating-an-anaconda-virtual-environment)
+# TABLE OF CONTENTS
+1. [SETUP AND USE GIT](#setup-and-use-git)
+2. [CREATING AN ANACONDA VIRTUAL ENVIRONMENT](#creating-an-anaconda-virtual-environment)
 
-## Pendahuluan
-Bagian ini menjelaskan tentang pendahuluan dari dokumen ini.
-
-## Latar Belakang
-Bagian ini berisi latar belakang yang relevan dengan topik.
-
+<br>
 
 ## SETUP AND USE GIT 
 SETUP
@@ -87,7 +82,7 @@ fetch and merge any commits from the tracking remote branch
 Thanks to, 
 Original source : https://education.github.com/git-cheat-sheet-education.pdf
 
-<hr>
+<br><br>
 
 ## CREATING AN ANACONDA VIRTUAL ENVIRONMENT
 - Before use virtual environment, we should download and install Anaconda in https://www.anaconda.com/download 
