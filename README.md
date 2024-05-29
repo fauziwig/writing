@@ -1,4 +1,93 @@
-# Writing
+# WRITING 
+
+# Daftar Isi
+1. [Pendahuluan](`#setup-and-use-git`)
+2. [Latar Belakang](`#creating-an-anaconda-virtual-environment`)
+
+## Pendahuluan
+Bagian ini menjelaskan tentang pendahuluan dari dokumen ini.
+
+## Latar Belakang
+Bagian ini berisi latar belakang yang relevan dengan topik.
+
+
+## SETUP AND USE GIT 
+SETUP
+Configuring user information used across all local repositories : 
+
+1. set a name that is identifiable for credit when review version history
+
+        git config --global user.name “[firstname lastname]”
+
+2. set an email address that will be associated with each history marker
+
+        git config --global user.email “[valid-email]”
+
+SETUP & INIT
+Configuring user information, initializing and cloning repositories : 
+
+3. initialize an existing directory as a Git repository
+
+        git init
+
+retrieve an entire repository from a hosted location via URL **(OPTIONAL)**
+
+        git clone [url]
+
+STAGE & SNAPSHOT
+Working with snapshots and the Git staging area :
+
+4. show modified files in working directory, staged for your next commit
+
+        git status
+
+5. add a file as it looks now to your next commit (stage)
+
+        git add [file]
+
+unstage a file while retaining the changes in working directory
+
+        git reset [file]
+
+diff of what is changed but not staged
+
+        git diff
+
+diff of what is staged but not yet commited
+
+        git diff --staged
+
+6. commit your staged content as a new commit snapshot
+
+        git commit -m “[descriptive message]”
+
+SHARE & UPDATE
+Retrieving updates from another repository and updating local repos : 
+
+7. add a git URL as an alias
+
+        git remote add [alias] [url]
+
+fetch down all the branches from that Git remote
+
+        git fetch [alias]
+
+merge a remote branch into your current branch to bring it up to date
+
+        git merge [alias]/[branch]
+
+8. Transmit local branch commits to the remote repository branch
+
+        git push [alias] [branch]
+
+fetch and merge any commits from the tracking remote branch
+
+        git pull
+
+Thanks to, 
+Original source : https://education.github.com/git-cheat-sheet-education.pdf
+
+<hr>
 
 ## CREATING AN ANACONDA VIRTUAL ENVIRONMENT
 - Before use virtual environment, we should download and install Anaconda in https://www.anaconda.com/download 
@@ -8,7 +97,7 @@ Here’s an example of how to create a new Conda environment using the conda cre
 1. Open your terminal or command prompt (after you installed success Anaconda, recommended use : Anaconda Prompt)
 2. Enter the following command to create a new Conda environment named `myenv`:
 
-        module load anaconda
+           module load anaconda
         conda create --name myenv
 
 You can also specify which version of Python you want to use by including the version number after the environment name. For example, to create a new environment named myenv with Python 3.9, you would enter:
