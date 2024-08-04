@@ -41,6 +41,16 @@
   	sql: 'SELECT pegawai.id_pegawai FROM pegawai \n' +
     '    JOIN outlet ON pegawai.id_outlet = outlet.id_outlet WHERE outlet.id_outlet = undefined'.
 
+	> [!SOLUSI]
+	> menambahkan req query id_outlet pada endpoint request PUT menjadi http://localhost:8080/api/absenstand/edit?id_outlet=11 dengan reqbody berikut : 
+	{
+  	"id_absensi_standkeeper_harian":2925,
+  	"id_pegawai_baru": 42, 
+  	"outlet_buka_tutup": 1,  
+  	"bon":1000, 
+  	"catatan":"nyatet doang"
+	}
+
   	- untuk menghandle error di atas, menambahkan kondisi jika tidak ada id_outlet (!id_outlet), maka berikan status 400 & message 'id_outlet is undefined or invalid'
   
 	- memperbarui data kehadiran per hari di tabel harian, pakai function updatePegawaiOutletBonById()
@@ -62,4 +72,5 @@
 	- masukkan hasil total kehadiran ke variabel totalKehadiranBaruObj 
 	- memperbarui data total kehadiran di tabel bulanan pakai function updateAttendanceAndBon menggunakan parameter input totalKehadiranBaruObj
 	- menampilkan response status 200 dan message "Outlet status tertutup dan data berhasil di update ke 0 ..."
-	
+
+
