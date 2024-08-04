@@ -74,3 +74,10 @@
 	- menampilkan response status 200 dan message "Outlet status tertutup dan data berhasil di update ke 0 ..."
 
 
+# findAll()
+- mendapatkan input request query dari user, request query berisi: id_outlet, bulan_absensi, tahun_absensi, id_pegawai(opsional/tidak wajib/NULL)
+- menjalankan kondisi, jika id_outlet, bulan_absensi, tahun_absensi bernilai kosong, maka muncul notif 'Wajib mengisi id_outlet, bulan_absensi, dan tahun_absensi'.
+- menjalankan function getOutletName() dengan parameter input id_outlet, dan menghasilkan nama outlet
+- menjalankan function getAll() untuk tabel absensistandkeeperharian dengan parameter input id_outlet, bulan_absensi, tahun_absensi, id_pegawai, kemudian menghasilkan data kehadiran harian standkeeper
+- menjalankan function getAll() untuk tabel absensistandkeeperbulanan dengan parameter input bulan_absensi, tahun_absensi, id_pegawai, kemudian menghasilkan data kehadiran bulanan standkeeper
+- 
