@@ -80,4 +80,6 @@
 - menjalankan function getOutletName() dengan parameter input id_outlet, dan menghasilkan nama outlet
 - menjalankan function getAll() untuk tabel absensistandkeeperharian dengan parameter input id_outlet, bulan_absensi, tahun_absensi, id_pegawai, kemudian menghasilkan data kehadiran harian standkeeper
 - menjalankan function getAll() untuk tabel absensistandkeeperbulanan dengan parameter input bulan_absensi, tahun_absensi, id_pegawai, kemudian menghasilkan data kehadiran bulanan standkeeper
-- 
+	- menjalankan validasi, jika ada error, maka tampilkan error. Jika data terdeteksi atau kosong, maka muncul notif 'Data AbsenStandBulanan tidak ditemukan'
+- membuatkan variable kosong bernama dataDetails bertipe array.
+- menjalanakn looping indexk
