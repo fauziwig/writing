@@ -82,4 +82,54 @@
 - menjalankan function getAll() untuk tabel absensistandkeeperbulanan dengan parameter input bulan_absensi, tahun_absensi, id_pegawai, kemudian menghasilkan data kehadiran bulanan standkeeper
 	- menjalankan validasi, jika ada error, maka tampilkan error. Jika data terdeteksi atau kosong, maka muncul notif 'Data AbsenStandBulanan tidak ditemukan'
 - membuatkan variable kosong bernama dataDetails bertipe array.
-- menjalanakn looping indexk
+- menjalankan looping berasal dari input absenStandBulananData,
+  	- menghitung total_kehadiran, pakai function getTotalKehadiran() dengan parameter input absenStandBulanan.id_pegawai, bulan_absensi, tahun_absensi 
+  	- menghitung total_bon, pakai function getTotalBon() dengan parameter input absenStandBulanan.id_pegawai, bulan_absensi, tahun_absensi
+  	- menghitung total_gaji_bulanan, pakai function getTotalGajiBulanan() dengan parameter input absenStandBulanan.id_pegawai, bulan_absensi, tahun_absensi
+  	- menghitung total_gaji_bersih berasal dari total_gaji_bulanan kurangi total_bon
+  	- mengambil data gaji_pokok
+  	- mengambil data nama_pegawai, pakai function getNamaPegawai() dengan parameter input id_pegawai
+	- mengirim data data yang diambil ditaruh ke absenStandBulanan.pegawai_details dan dataDetails yang akan ditampilkan di response body
+
+# Alur Diagram untuk Fungsi `findAll()`
+```plaintext
+Start
+|
+|-- Validate Input
+|   |-- Check if `id_outlet`, `bulan_absensi`, `tahun_absensi` are provided
+|   |   |-- If not provided, return 400 error
+|
+|-- Set shared state
+|   |-- Set `sharedState.id_outlet` to `id_outlet`
+|
+|-- Get Outlet Name
+|   |-- Call `Pegawai.getOutletName(id_outlet, callback)`
+|       |-- If error, return 500 error
+|       |-- If outlet not found, return 404 error
+|
+|-- Get AbsenStandHarian Data
+|   |-- Call `AbsenStandHarian.getAll({id_outlet, bulan_absensi, tahun_absensi, id_pegawai}, callback)`
+|       |-- If error, return 500 error
+|       |-- If no data found, return 404 error
+|
+|-- Get AbsenStandBulanan Data
+|   |-- Call `AbsenStandBulanan.getAll({bulan_absensi, tahun_absensi, id_pegawai}, callback)`
+|       |-- If error, return 500 error
+|       |-- If no data found, return 404 error
+|
+|-- Process Data
+|   |-- Initialize `dataDetails` array
+|   |-- For each `absenStandBulanan` in `absenStandBulananData`:
+|       |-- Get `total_kehadiran` for the employee
+|       |-- Get `total_bon` for the employee
+|       |-- Get `total_gaji_bulanan` for the employee
+|       |-- Calculate `total_gaji_bersih` as `total_gaji_bulanan - total_bon`
+|       |-- Get `nama_pegawai`
+|       |-- Add `pegawai_details` to `absenStandBulanan`
+|       |-- Push to `dataDetails` array
+|
+|-- Send Response
+|   |-- Send response with `nama_outlet`, `bulan_absensi`, `tahun_absensi`, `absenStandHarianData`, `absenStandBulananData`, and `dataDetails`
+|
+End
+
